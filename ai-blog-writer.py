@@ -50,7 +50,7 @@ intent_type = st.selectbox(
 if st.button('Generate Blog'):
     if user_input:
         with st.spinner('Generating blog post...'):
-            prompt = f"""As an expert copywriter specialized in blog writing, your task is to create a 750 words creative post for {user_input} with the intent {intent_type}.
+            prompt = f"""As an expert copywriter specialized in blog writing, your task is to Create a creative post that is around 1000 words long for {user_input} with the intent {intent_type}.
             Please ensure the blog post is engaging, well-researched, and tailored to meet the specified intent. The content should be clear, concise, and provide value to the reader.
             The output should be Only The generated blog."""
 
