@@ -16,7 +16,7 @@ API_KEY = os.getenv('GEMINI_API_KEY')
 # Set up the Streamlit app
 st.title('Blog Writer')
 st.write('Generate creative blog posts for your content!')
-St.markdown(hide.menu,unsafe_allow_html=True)
+St.markdown(hide_menu,unsafe_allow_html=True)
 
 # Custom CSS for button styling
 st.markdown(
