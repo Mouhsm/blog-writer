@@ -2,26 +2,6 @@ import streamlit as st
 import requests
 import os
 
-# Updated CSS to hide potential tooltips or hover elements
-hide_st_style = """
-            <style>
-            /* Hide all tooltips or hover text */
-            [data-tooltip], [title], .tooltip, .tooltiptext, .hover-text, .stTooltip, .css-1v0mbdj.e16nr0p39 {
-                display: none !important;
-            }
-            /* Hide all links and tooltips within the app */
-            a[href*="ai-blog-writer-05d8.onrender.com"] {
-                pointer-events: none; /* Prevent clicking */
-                display: none !important;
-            }
-            /* Hide specific classes used for tooltips */
-            .css-1v0mbdj, .css-1s2h2i6 {
-                display: none !important;
-            }
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
 # Get the API key from the environment variable
 API_KEY = os.getenv('GEMINI_API_KEY')
 
