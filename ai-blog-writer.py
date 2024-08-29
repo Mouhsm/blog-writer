@@ -2,13 +2,16 @@ import streamlit as st
 import requests
 import os
 
-# Updated CSS to specifically target and hide the chain icon
+# Updated CSS to target and hide the specific SVG chain icon
 hide_st_style = """
             <style>
-            /* Hide the chain icon by targeting its SVG */
-            .css-1s2h2i6 { display: none; } /* Example class, update with actual class if different */
-            svg[xmlns="http://www.w3.org/2000/svg"] {
-                display: none;
+            /* Hide the entire SVG element */
+            svg {
+                display: none !important;
+            }
+            /* More specific targeting, if the above is too broad */
+            svg[xmlns="http://www.w3.org/2000/svg"] path[d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"] {
+                display: none !important;
             }
             </style>
             """
