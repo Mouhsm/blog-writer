@@ -4,7 +4,7 @@ import os
 
 hide menu = """
 <style>
-#Mainenu {
+#stHeaderActionElements {
     visibility:hidden;
 }
 </style>
