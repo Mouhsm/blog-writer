@@ -2,15 +2,19 @@ import streamlit as st
 import requests
 import os
 
-# Updated CSS to target and hide the specific SVG chain icon
+# Updated CSS to hide tooltips or links
 hide_st_style = """
             <style>
-            /* Hide the entire SVG element */
-            svg {
+            /* Hide any element that looks like a tooltip or link */
+            .tooltip, .link-tooltip, .stTooltip {
                 display: none !important;
             }
-            /* More specific targeting, if the above is too broad */
-            svg[xmlns="http://www.w3.org/2000/svg"] path[d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"] {
+            /* Hide any anchor tags with href attributes (if they are the tooltips) */
+            a[href*="ai-blog-writer-05d8.onrender.com"] {
+                display: none !important;
+            }
+            /* Hide any generic tooltip that might be floating */
+            .stTooltip {
                 display: none !important;
             }
             </style>
