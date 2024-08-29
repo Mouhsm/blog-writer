@@ -2,19 +2,20 @@ import streamlit as st
 import requests
 import os
 
-# Updated CSS to hide tooltips or links
+# Updated CSS to hide potential tooltips or hover elements
 hide_st_style = """
             <style>
-            /* Hide any element that looks like a tooltip or link */
-            .tooltip, .link-tooltip, .stTooltip {
+            /* Hide all tooltips or hover text */
+            [data-tooltip], [title], .tooltip, .tooltiptext, .hover-text, .stTooltip, .css-1v0mbdj.e16nr0p39 {
                 display: none !important;
             }
-            /* Hide any anchor tags with href attributes (if they are the tooltips) */
+            /* Hide all links and tooltips within the app */
             a[href*="ai-blog-writer-05d8.onrender.com"] {
+                pointer-events: none; /* Prevent clicking */
                 display: none !important;
             }
-            /* Hide any generic tooltip that might be floating */
-            .stTooltip {
+            /* Hide specific classes used for tooltips */
+            .css-1v0mbdj, .css-1s2h2i6 {
                 display: none !important;
             }
             </style>
