@@ -2,6 +2,15 @@ import streamlit as st
 import requests
 import os
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Get the API key from the environment variable
 API_KEY = os.getenv('GEMINI_API_KEY')
 
