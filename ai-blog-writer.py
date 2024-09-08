@@ -9,10 +9,13 @@ API_KEY = os.getenv('GEMINI_API_KEY')
 st.title('Blog Writer')
 st.write('Generate creative blog posts for your content!')
 
-# Custom CSS for button styling
+# Custom CSS to hide Streamlit menu and footer, and button styling
 st.markdown(
     """
     <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    
     .stButton > button {
         background-color: #1f3a93;
         color: white;
