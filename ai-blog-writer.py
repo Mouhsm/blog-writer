@@ -6,8 +6,6 @@ import os
 API_KEY = os.getenv('GEMINI_API_KEY')
 
 # Set up the Streamlit app
-st.title('Blog Writer')
-st.write('Generate creative blog posts for your content!')
 
 # Custom CSS to hide Streamlit menu and footer, and button styling
 st.markdown(
